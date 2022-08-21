@@ -1,27 +1,18 @@
-// Declaración de mis variables:
-
-
-let eligePokemon = prompt('Elige tu pokémon para iniciar la batalla. Tus opciones son: chikorita, cyndaquil y totodile.')
+let eligePokemon = prompt('¡Bienvenido a la región de Johto! Para dar inicio a tu aventura Pokémon, elige a tu compañero pokémon de la región.')
 const primerOponente = 'Houndour'
 const segundoOponente = 'Rowlet'
 const tercerOponente = 'Fennekin'
 
-window.addEventListener( 'DOMContentLoaded', (event) => {
-    while(eligePokemon === 'chikorita'){
-        alert('¡Felicidades! Ahora tienes un Chikorita con 100 PS');
-        alert('Tu oponente es: '+ primerOponente)
-    } if (eligePokemon === 'cyndaquil'){
-        alert('¡Felicidades! Ahora tienes un Cyndaquil con 100 PS');
-        alert('Tu oponente es: '+ segundoOponente)
-    } else if(eligePokemon === 'totodile'){
-        alert('¡Felicidades! Ahora tienes un Totodile con 100 PS');
-        alert('Tu oponente es: '+ tercerOponente)
-    } else if((eligePokemon !== 'chikorita') || (eligePokemon !== 'cyndaquil') || (eligePokemon !== 'totodile')){
-        alert('Ingresa un Pokémon válido.');
-        prompt('Elige tu pokémon para iniciar la batalla. Tus opciones son: chikorita, cyndaquil y totodile.')
-    } else if ((eligePokemon === 'chikorita') || (eligePokemon === 'cyndaquil') || (eligePokemon === 'totodile')){
-        alert('¡Prepárate para la batalla!')
-    } 
-}) 
-
-
+while((eligePokemon !== 'chikorita') && (eligePokemon !== 'cyndaquil') && (eligePokemon !== 'totodile')){
+    alert('Elige un Pokémon correcto.');
+    eligePokemon = prompt('¡Bienvenido a la región de Johto! Para dar inicio a tu aventura Pokémon, elige a tu compañero pokémon de la región.')
+} if(eligePokemon === 'chikorita'){
+    alert('¡Felicidades! El Profesor Elm te ha dado un ' +eligePokemon+ ' con 100 PS (puntos de salud).');
+    alert('Tu enemigo será ' +primerOponente)
+} else if(eligePokemon === 'cyndaquil'){
+    alert('¡Felicidades! El Profesor Elm te ha dado un ' +eligePokemon+ ' con 100 PS (puntos de salud).');
+    alert('Tu enemigo será '+segundoOponente)
+} else if(eligePokemon === 'totodile'){
+    alert('¡Felicidades! El Profesor Elm te ha dado un ' +eligePokemon+ ' con 100 PS (puntos de salud).');
+    alert('Tu enemigo será '+tercerOponente)
+} alert('¡Prepárate para la aventura!')
